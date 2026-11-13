@@ -1,0 +1,25 @@
+﻿- **Uygulanacak prosedür**: Ofisten çalışan personelin 24 inç standart monitör talebi, BT Ekipman Talep Prosedürü ve Satın Alma ve Harcama Onay Prosedürü kurallarına göre yürütülür. Talep edilen 24 inç standart monitörün birim fiyatı 18.000 TL olup (Kaynak: *05_Ekipman_Katalogu.xlsx*), bu tutar 0 - 50.000 TL aralığında yer aldığından mali eşikler açısından tek seviyeli onay kuralına tabidir. Çelişki Filtreleme Kuralı gereğince, dokümanlar arasındaki 50.000 TL (Satın Alma Prosedürü ve Yetki Matrisi) ile 75.000 TL (BT Ekipman Talep Prosedürü) üst limit farkı, talep edilen 18.000 TL'lik tutar her iki limitin de altında kaldığı için süreci tıkayan bir çelişki oluşturmaz.
+
+- **İzlenecek işlem adımları**:
+  1. Çalışan, şirket portalı üzerinden **FRM-IT-004 Ekipman Talep Formu**'nu doldurur (Kaynak: *01_BT_Ekipman_Talep_Proseduru.docx*, *05_Ekipman_Katalogu.xlsx*).
+  2. Form, çalışanın bağlı olduğu **Departman Yöneticisine** iletilir (Kaynak: *01_BT_Ekipman_Talep_Proseduru.docx*).
+  3. Departman Yöneticisi iş ihtiyacını, talep gerekçesini ve bütçe kontrolünü gerçekleştirerek onay veya ret verir (Kaynak: *01_BT_Ekipman_Talep_Proseduru.docx*, *04_Yetki_Matrisi.xlsx*).
+  4. Onaylanan talep **BT Operasyon ekibine** iletilir; ekip tarafından stok ve teknik uygunluk kontrolü yapılır (Kaynak: *01_BT_Ekipman_Talep_Proseduru.docx*).
+  5. Stokta bulunmayan ekipman için Satın Alma süreci başlatılır ve sipariş oluşturulmadan önce gerekli onayların tamamlandığı kontrol edilir (Kaynak: *01_BT_Ekipman_Talep_Proseduru.docx*, *03_Satin_Alma_Harcama_Onay_Proseduru.docx*).
+  6. Süreç sonunda talep formu, onay kayıtları ve teslim tutanağı ilgili talep kaydına eklenir (Kaynak: *01_BT_Ekipman_Talep_Proseduru.docx*).
+
+- **Gerekli onaylar**:
+  - **Departman Yöneticisi**: 18.000 TL tutarındaki standart ekipman alımı için tek başına onay yetkisine sahiptir (Kaynak: *01_BT_Ekipman_Talep_Proseduru.docx*, *03_Satin_Alma_Harcama_Onay_Proseduru.docx*, *04_Yetki_Matrisi.xlsx*).
+
+- **Tespit edilen çelişkiler**:
+  - Mali onay limitleri açısından *01_BT_Ekipman_Talep_Proseduru.docx* dokümanında 75.000 TL ve altındaki talepler için Departman Yöneticisi onayı yeterli görülürken; *03_Satin_Alma_Harcama_Onay_Proseduru.docx* ve *04_Yetki_Matrisi.xlsx* dokümanlarında bu sınır 50.000 TL olarak belirlenmiştir. Ancak talep edilen tutar (18.000 TL) her iki limitin de altında kaldığı için Çelişki Filtreleme Kuralı gereği bu durum süreci tıkayan bir çelişki yaratmamaktadır.
+
+- **Eksik veya belirsiz bilgiler**:
+  - Bulunmamaktadır. Talep edilen ürün katalogda standart olarak tanımlanmış ve tutarı açıkça belirtilmiştir.
+
+- **Kaynak dokümanlar**:
+  - `01_BT_Ekipman_Talep_Proseduru.docx` (Doküman Kodu: PR-BT-004, Versiyon: 2.1)
+  - `02_Uzaktan_Calisma_Politikasi.docx` (Doküman Kodu: POL-IK-012, Versiyon: 1.4) - *Ofisten çalışan personel kapsamı için referans*
+  - `03_Satin_Alma_Harcama_Onay_Proseduru.docx` (Doküman Kodu: PR-FIN-007, Versiyon: 3.0)
+  - `04_Yetki_Matrisi.xlsx`
+  - `05_Ekipman_Katalogu.xlsx`

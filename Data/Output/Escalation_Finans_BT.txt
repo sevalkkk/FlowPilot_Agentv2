@@ -1,0 +1,68 @@
+KİME: finans@sirket.com; bt-surec@sirket.com
+KONU: [FlowPilot AI - Eskalasyon] Prosedürler Arası Mali Onay Çelişkisi Tespiti
+
+Sayın Finans ve BT Süreç Sahipleri,
+Çalışan tarafından yapılan 'Uzaktan çalışan bir personel 65.000 TL değerinde monitör talep etmek istiyor. Ne yapmalı?' sorgusu incelenirken kurumsal dokümanlar arasında mali onay eşiği çelişkisi tespit edilmiştir.
+PR-FIN-007 (Satın Alma ve Harcama Onay Prosedürü) 'Öncelik ve Çakışma' maddesi gereği otomatik eşik seçimi yapılmamış olup, detaylar aşağıda onayınıza/netleştirmenize sunulmuştur:
+
+**Uzaktan çalışan bir personelin 65.000 TL değerinde monitör talebinde bulunması durumunda yapması gerekenler, izleyeceği süreç adımları ve kurumsal dokümanlar arasındaki çelişkiler aşağıda bütünsel bir analitik yaklaşımla sunulmuştur:**
+
+### Özet Doğrudan Cevap
+Uzaktan çalışan personel, 65.000 TL değerindeki monitör talebi için şirket portalındaki `FRM-IT-004 Ekipman Talep Formu`'nu doldurmalı ve talep kaydına `IK-REMOTE-02 Uzaktan Çalışma Uygunluk Belgesi`'ni eklemelidir. 34 inç ultrawide monitör standart dışı bir ekipman olduğu için birim yöneticisi iş gerekçesini açıklamalıdır. Ancak talep edilen tutar (65.000 TL) açısından farklı kurumsal dokümanlarda birbiriyle çelişen mali onay yetki eşikleri yer aldığından, finansal onay sürecinin hangi üst yönetim kademelerinden geçeceği konusunda dokümanlar arasında uyumsuzluk bulunmaktadır.
+
+---
+
+### Uygulanacak Prosedür ve Süreç Adımları
+
+1. **Formun Doldurulması ve Başvuru:**
+   - Çalışan, şirket portalı üzerinden `FRM-IT-004 Ekipman Talep Formu`'nu doldurur *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx, 02_Uzaktan_Calisma_Politikasi.docx, 05_Ekipman_Katalogu.xlsx)*.
+   - 34 inç ultrawide monitörün birim fiyatı 65.000 TL olup katalogda "Standart dışı" olarak tanımlandığı için, birim yöneticisinin iş gerekçesini açıklaması gereklidir *(Kaynak: 05_Ekipman_Katalogu.xlsx)*.
+
+2. **Uzaktan Çalışma Uygunluk Kontrolü:**
+   - Personel uzaktan çalışan statüsünde olduğu ve ergonomik ekipman talebinde bulunduğu için, `IK-REMOTE-02 Uzaktan Çalışma Uygunluk Belgesi` talep kaydına eklenmelidir *(Kaynak: 02_Uzaktan_Calisma_Politikasi.docx)*.
+   - İlgili uygunluk belgesi, İnsan Kaynakları İş Ortağı tarafından kontrol edilir *(Kaynak: 02_Uzaktan_Calisma_Politikasi.docx)*. Uzaktan çalışma statüsünün İK sistemi üzerinde aktif olması gerekir *(Kaynak: 02_Uzaktan_Calisma_Politikasi.docx)*.
+
+3. **Yönetici ve Mali Onay Süreci:**
+   - Talep, çalışanın bağlı olduğu Departman Yöneticisine iletilir; yönetici iş ihtiyacını ve talep gerekçesini kontrol eder *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx)*.
+   - *Mali onay aşamasında dokümanlar arasında çelişki bulunmaktadır (Detaylar "Tespit Edilen Çelişkiler" bölümündedir).*
+
+4. **BT ve Satın Alma Süreci:**
+   - Onaylanan talep BT Operasyon ekibine iletilir ve stok ile teknik uygunluk kontrolü yapılır *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx)*.
+   - Stokta bulunmayan ekipman için Satın Alma süreci başlatılır *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx)*. Satın Alma, sipariş oluşturulmadan önce gerekli onayların tamamlandığını kontrol eder *(Kaynak: 03_Satin_Alma_Harcama_Onay_Proseduru.docx)*.
+
+5. **Kayıt ve Saklama:**
+   - Talep formu, onay kayıtları ve teslim tutanağı ilgili talep kaydına eklenir *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx)*.
+
+---
+
+### Gerekli Onaylar
+* **Departman Yöneticisi:** İş ihtiyacı, talep gerekçesi ve 34 inç monitör için iş gerekçesinin açıklanması yönünden tüm senaryolarda zorunludur *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx, 05_Ekipman_Katalogu.xlsx)*.
+* **İnsan Kaynakları İş Ortağı:** `IK-REMOTE-02 Uzaktan Çalışma Uygunluk Belgesi` kontrolü için gereklidir *(Kaynak: 02_Uzaktan_Calisma_Politikasi.docx)*.
+* **Üst Yönetim / Direktör / Finans Onayları:** 65.000 TL tutarındaki harcama için dokümanlar arasındaki çelişki nedeniyle hangi ek onayların (İlgili Direktör veya Finans Direktörü) alınacağı belirsizdir (Aşağıya bakınız).
+
+---
+
+### Tespit Edilen Çelişkiler
+
+65.000 TL değerindeki monitör talebi için farklı dokümanlarda çelişen mali onay yetki kuralları bulunmaktadır:
+
+1. **BT Ekipman Talep Prosedürü (PR-BT-004 - Versiyon 2.1):** 
+   - Toplam bedeli **75.000 TL ve altında olan** ekipman taleplerinde yalnızca **Departman Yöneticisi onayı yeterlidir**. 75.000 TL üzerindeki talepler BT Direktörü onayına sunulur. Bu kurala göre 65.000 TL'lik talep için sadece Departman Yöneticisi onayı yeterlidir *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx)*.
+2. **Uzaktan Çalışma Politikası (POL-IK-012 - Versiyon 1.4):** 
+   - Uzaktan çalışanların ekipman taleplerinin BT Ekipman Talep Prosedürü'ne göre yürütüleceğini belirtir, ancak bu politikanın kendi içinde mali onay limitleri yoktur *(Kaynak: 02_Uzaktan_Calisma_Politikasi.docx)*.
+3. **Satın Alma ve Harcama Onay Prosedürü (PR-FIN-007 - Versiyon 3.0) & Yetki Matrisi (Yetki_Matrisi.xlsx):** 
+   - Tek seferlik ekipman alımlarında **50.000 TL üzerindeki** toplam tutarlar ("50.000,01 - 100.000 TL" aralığı) için Departman Yöneticisi onayına ek olarak **İlgili Direktör onayı zorunludur**. Bu kurala göre 65.000 TL'lik talep için Departman Yöneticisi + İlgili Direktör onayı gereklidir *(Kaynak: 03_Satin_Alma_Harcama_Onay_Proseduru.docx, 04_Yetki_Matrisi.xlsx)*.
+
+**Çelişkinin Çözümüne İlişkin Kural:** 
+Satın Alma ve Harcama Onay Prosedürü'nde *"Başka bir dokümanda farklı bir mali eşik yer alıyorsa konu Finans ve ilgili süreç sahibi tarafından netleştirilir; otomatik olarak daha düşük veya daha yüksek eşik seçilmez"* hükmü yer almaktadır *(Kaynak: 03_Satin_Alma_Harcama_Onay_Proseduru.docx)*. Bu nedenle, 65.000 TL'lik talep için BT Prosedürü (75.000 TL altı tek onay) ile Satın Alma Prosedürü/Yetki Matrisi (50.000 TL üstü Direktör onayı) birbiriyle çelişmektedir. Otomatik bir seçim yapılamaz.
+
+---
+
+### Eksik veya Belirsiz Bilgiler
+* **Mali Onay Yetki Çatışması:** 65.000 TL tutarındaki harcama için sadece Departman Yöneticisi onayının mı (BT Prosedürüne göre) yoksa Departman Yöneticisi + İlgili Direktör onayının mı (Satın Alma Prosedürü ve Yetki Matrisine göre) geçerli olduğu dokümanlar arasında çelişkilidir. Bu durumun Finans ve ilgili süreç sahibi tarafından netleştirilmesi gerekir *(Kaynak: 01_BT_Ekipman_Talep_Proseduru.docx, 03_Satin_Alma_Harcama_Onay_Proseduru.docx, 04_Yetki_Matrisi.xlsx)*.
+
+---
+
+### Kaynak Dokümanlar
+1. `01_BT_Ekipman_Talep_Proseduru.docx` (Doküman Kodu: PR-BT-004, Versiyon: 2.1)
+2. `02_Uzaktan_Calisma_Politikasi.docx` (Doküman Kodu: POL-IK-012, Versiyon:

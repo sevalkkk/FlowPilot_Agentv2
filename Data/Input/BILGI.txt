@@ -1,0 +1,26 @@
+KURUMSAL PROSEDÜR ANALİZİ - ÖRNEK DOSYA SETİ
+
+Bu dosyalar UiPath + Gemini akışını test etmek için hazırlanmış kurgusal örneklerdir.
+Gerçek şirket politikası olarak kullanılmamalıdır.
+
+DOSYALAR
+01_BT_Ekipman_Talep_Proseduru.docx
+02_Uzaktan_Calisma_Politikasi.docx
+03_Satin_Alma_Harcama_Onay_Proseduru.docx
+04_Yetki_Matrisi.xlsx
+05_Ekipman_Katalogu.xlsx
+
+ÖNERİLEN TEST SORUSU
+"Uzaktan çalışan bir personel 65.000 TL değerinde 34 inç monitör talep etmek istiyor.
+Hangi adımları izlemeli, kimlerden onay almalı ve dokümanlar arasında çelişki var mı?"
+
+TESTTE BEKLENEN ANALİZ
+- Uzaktan Çalışma Politikası, IK-REMOTE-02 uygunluk belgesini istiyor.
+- BT Ekipman Talep Prosedürü, 75.000 TL ve altı taleplerde Departman Yöneticisi onayını yeterli görüyor.
+- Satın Alma ve Harcama Onay Prosedürü ile Yetki Matrisi, 50.000 TL üzeri alımlarda Direktör onayı istiyor.
+- 65.000 TL tutarında çelişkili mali onay eşiği bulunduğu için sistem bunu açıkça belirtmeli.
+- Dokümanlarda açık bir üstünlük kuralı tanımlanmadığından, sistem çelişkiyi kendi başına kesin hükme bağlamamalı; Finans ve süreç sahibinden teyit önermeli.
+- Ayrıca talep formu, BT teknik/stok kontrolü ve satın alma adımları listelenmeli.
+
+VERSİYON / TARİH NOTU
+Örneklerdeki doküman tarihleri ve onay durumları kurgusaldır. Excel Yetki Matrisi 01.10.2026 tarihli örnek kayıtlar içerir.

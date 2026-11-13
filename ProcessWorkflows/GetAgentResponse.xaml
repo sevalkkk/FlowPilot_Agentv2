@@ -1,0 +1,129 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetAgentResponse" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_apiKey" Type="InArgument(x:String)" />
+    <x:Property Name="in_policies" Type="InArgument(x:String)" />
+    <x:Property Name="out_agentResponse" Type="OutArgument(x:String)" />
+    <x:Property Name="in_userQuery" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>GetAgentResponse_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Net.Http</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Net.Http.Headers</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Net.Http.WinHttpHandler</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetAgentResponse" sap:VirtualizedContainerService.HintSize="760.8000000000001,512.4399999999999" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xA;string[] models = {&#xA;    &quot;gemini-3.8-flash&quot;,&#xA;    &quot;gemini-3.5-flash-lite&quot;&#xA;};&#xA;&#xA;&#xA;string prompt =&#xA;    &quot;Aşağıda kurumun farklı prosedürlerinden, politikalarından ve iç dokümanlarından &quot; +&#xA;    &quot;toplanmış bütün metinler bulunmaktadır.\n\n&quot; +&#xA;&#xA;    &quot;GÖREVİN:\n&quot; +&#xA;    &quot;Kullanıcının sorusunu yalnızca doğrudan eşleşen bir cümle üzerinden cevaplama. &quot; +&#xA;    &quot;Önce allText içerisindeki bütün metinleri ayrıntılı olarak incele. &quot; +&#xA;    &quot;Soruyla doğrudan veya dolaylı olarak ilişkili olan tüm hükümleri, şartları, &quot; +&#xA;    &quot;istisnaları, açıklamaları ve birbirini tamamlayan bilgileri tespit et.\n\n&quot; +&#xA;&#xA;    &quot;KULLANICININ SORUSU:\n&quot; + in_query +&#xA;&#xA;    &quot;\n\nKURUMSAL DOKÜMANLARIN TAMAMI:\n&quot; +&#xA;     in_policy +&#xA;&#xA;    &quot;\n\nANALİZ VE DEĞERLENDİRME TALİMATLARI:\n&quot; +&#xA;    &quot;1. Soruyla ilişkili bilgileri tüm metinler içerisinde ara. &quot; +&#xA;    &quot;Sadece sorunun geçtiği bölüme bağlı kalma.\n&quot; +&#xA;&#xA;    &quot;2. Farklı dokümanlarda veya farklı bölümlerde bulunan, &quot; +&#xA;    &quot;aynı konuyu açıklayan ya da birbirini tamamlayan hükümleri birlikte değerlendir.\n&quot; +&#xA;&#xA;    &quot;3. Bir hükümde belirtilen hak, başka bir hükümde belirtilen kısıtlama, &quot; +&#xA;    &quot;istisna veya koşul ile birlikte ele alınmalıdır.\n&quot; +&#xA;&#xA;    &quot;4. Örneğin bir dokümanda belirli bir çalışan grubuna 5 gün izin hakkı &quot; +&#xA;    &quot;tanınmışsa, başka bir dokümanda bu çalışan grubunun yıllık izin hakkına &quot; +&#xA;    &quot;ilişkin bir kısıtlama bulunup bulunmadığını da araştır. İlgili hükümleri &quot; +&#xA;    &quot;birlikte değerlendirerek kapsamı açıkla.\n&quot; +&#xA;&#xA;    &quot;5. Birbirine benzeyen ifadeleri otomatik olarak aynı hak veya koşul kabul etme. &quot; +&#xA;    &quot;İzin türü, çalışan grubu, kıdem, çalışma şekli, süre, tarih ve uygunluk &quot; +&#xA;    &quot;şartlarının aynı olup olmadığını kontrol et.\n&quot; +&#xA;&#xA;    &quot;6. Birbiriyle ilişkili görünen iki hüküm farklı çalışan gruplarına &quot; +&#xA;    &quot;veya farklı durumlara uygulanıyorsa bunları birbirine karıştırma.\n&quot; +&#xA;&#xA;    &quot;7. Bir hüküm genel kuralı, diğeri özel bir durumu açıklıyorsa özel hükmün &quot; +&#xA;    &quot;hangi koşullarda geçerli olduğunu değerlendir. Ancak dokümanlarda &quot; +&#xA;    &quot;bulunmayan bir öncelik kuralı oluşturma.\n&quot; +&#xA;&#xA;    &quot;8. Dokümanlar arasında çelişki varsa bunu gizleme. Çelişen hükümleri &quot; +&#xA;    &quot;ayrı ayrı belirt ve hangi koşulda hangisinin uygulanacağını dokümanlardan &quot; +&#xA;    &quot;kesin olarak belirleyemiyorsan bunu açıkça ifade et.\n&quot; +&#xA;&#xA;    &quot;9. Kullanıcının sorusuyla ilişkili bütün önemli bilgileri bir araya getir. &quot; +&#xA;    &quot;Tek bir cümleye dayanarak eksik veya yanıltıcı cevap verme.\n&quot; +&#xA;&#xA;    &quot;10. Dokümanlarda bulunmayan bir hakkı, yasaklamayı, süreyi, istisnayı &quot; +&#xA;    &quot;veya uygulamayı tahmin ederek üretme.\n\n&quot; +&#xA;&#xA;    &quot;CEVAP FORMATI:\n&quot; +&#xA;    &quot;- Önce kullanıcının sorusuna doğrudan cevap ver.\n&quot; +&#xA;    &quot;- Ardından ilgili hükümleri ve birbirleriyle bağlantılarını açıkla.\n&quot; +&#xA;    &quot;- Varsa koşulları, istisnaları ve kısıtlamaları belirt.\n&quot; +&#xA;    &quot;- Farklı dokümanlardan gelen bilgileri birlikte değerlendir.\n&quot; +&#xA;    &quot;- Gerekirse hangi doküman veya bölümde geçtiğini belirt.\n&quot; +&#xA;    &quot;- Bilginin kesin olmadığı veya dokümanlarda bulunmadığı durumları açıkça söyle.\n&quot; +&#xA;    &quot;- Gereksiz tekrar yapma ancak önemli hiçbir koşulu atlama.\n\n&quot; +&#xA;&#xA;    &quot;SONUÇ:\n&quot; +&#xA;    &quot;Kullanıcıya tek tek cümleleri sıralayan bir cevap değil, &quot; +&#xA;    &quot;bütün ilgili kurumsal bilgileri analiz ederek oluşturulmuş, &quot; +&#xA;    &quot;tutarlı, ayrıntılı ve doğru bir değerlendirme sun.&quot;;&#xA;    &#xA;string systemInstruction =&#xA;   &quot;Sen kurumsal politika, prosedür ve yetki mekanizmaları &quot; +&#xA;    &quot;konusunda uzman bir asistansın.\n\n&quot; +&#xA;&#xA;    &quot;Sana birden fazla Word ve Excel dokümanından &quot; +&#xA;    &quot;oluşturulmuş kurumsal bilgi havuzu verilecektir.\n\n&quot; +&#xA;&#xA;    &quot;Görevlerin:\n\n&quot; +&#xA;&#xA;    &quot;1. Kullanıcının sorusuyla ilgili tüm dokümanları incele.\n&quot; +&#xA;    &quot;2. İlgili prosedür ve politikaları karşılaştır.\n&quot; +&#xA;    &quot;3. Dokümanlar arasındaki çelişkileri tespit et.\n&quot; +&#xA;    &quot;4. Dokümanların tarih, versiyon ve onay bilgilerini dikkate al.\n&quot; +&#xA;    &quot;5. Açıkça tanımlanmış bir öncelik kuralı yoksa çelişkili hükümlerden birini kendin seçme.\n&quot; +&#xA;    &quot;6. Kullanıcının yapması gereken işlemleri sırasıyla listele.\n&quot; +&#xA;    &quot;7. Her adımın hangi dokümana dayandığını belirt.\n&quot; +&#xA;    &quot;8. Eksik bilgi varsa kullanıcıya sor.\n&quot; +&#xA;    &quot;9. Yanıtlarını yalnızca verilen dokümanlara dayandır.\n&quot; +&#xA;    &quot;10. Dokümanlarda bulunmayan hiçbir kuralı uydurma.\n\n&quot; +&#xA;&#xA;    &quot;11. Kullanıcının sorusuyla doğrudan ilişkili olmayan ancak &quot; +&#xA;    &quot;cevabın doğruluğunu, kapsamını veya uygulanabilirliğini etkileyen &quot; +&#xA;    &quot;diğer hükümleri de tüm bilgi havuzunda araştır.\n&quot; +&#xA;&#xA;    &quot;12. Farklı dokümanlarda veya farklı bölümlerde yer alan &quot; +&#xA;    &quot;birbiriyle ilişkili, birbirini tamamlayan ya da birbirini &quot; +&#xA;    &quot;sınırlandıran hükümleri birlikte değerlendir.\n&quot; +&#xA;&#xA;    &quot;13. Bir dokümanda belirtilen hak, izin, yetki veya uygulamanın &quot; +&#xA;    &quot;başka bir dokümanda ek koşulu, istisnası, kısıtlaması veya &quot; +&#xA;    &quot;uygulama yöntemi bulunup bulunmadığını kontrol et.\n&quot; +&#xA;&#xA;    &quot;14. Örneğin bir dokümanda uzaktan çalışan personele 5 gün izin &quot; +&#xA;    &quot;hakkı tanımlanmışsa, diğer dokümanlarda 5 günlük izin hakkına, &quot; +&#xA;    &quot;uzaktan çalışan personele veya aynı izin türüne ilişkin &quot; +&#xA;    &quot;kısıtlama ve istisnaları da araştır. İlgili hükümleri birlikte değerlendir.\n&quot; +&#xA;&#xA;    &quot;15. Benzer ifadeleri otomatik olarak aynı hak veya koşul kabul etme. &quot; +&#xA;    &quot;Çalışan grubu, izin türü, süre, kıdem, çalışma şekli ve &quot; +&#xA;    &quot;uygunluk şartlarının aynı olup olmadığını kontrol et.\n&quot; +&#xA;&#xA;    &quot;16. Genel hükümler ile özel hükümleri birlikte incele. &quot; +&#xA;    &quot;Ancak dokümanlarda açıkça belirtilmeyen bir öncelik veya &quot; +&#xA;    &quot;üstünlük ilişkisi oluşturma.\n&quot; +&#xA;&#xA;    &quot;17. Birbirini tamamlayan hükümleri tek bir bütün halinde açıkla. &quot; +&#xA;    &quot;Ancak her hükmün hangi dokümandan geldiğini ayrı ayrı belirt.\n&quot; +&#xA;&#xA;    &quot;18. Bir hükmün uygulanabilmesi başka bir koşula bağlıysa &quot; +&#xA;    &quot;bu koşulu mutlaka belirt. Koşulun sağlanıp sağlanmadığı &quot; +&#xA;    &quot;dokümanlardan anlaşılamıyorsa eksik bilgi olarak göster.\n&quot; +&#xA;&#xA;    &quot;19. Kullanıcının sorusunu yalnızca anahtar kelime eşleşmesine &quot; +&#xA;    &quot;göre cevaplama. Sorunun anlamını, amacını ve ilişkili &quot; +&#xA;    &quot;kurumsal süreçleri dikkate al.\n&quot; +&#xA;&#xA;    &quot;20. İlgili bilgi birden fazla dokümana dağılmışsa hiçbir &quot; +&#xA;    &quot;önemli hükmü atlamadan bütünsel bir değerlendirme yap.\n\n&quot; +&#xA;&#xA;    &quot;Yanıt formatı:\n\n&quot; +&#xA;&#xA;    &quot;- Uygulanacak prosedür\n&quot; +&#xA;    &quot;- İzlenecek işlem adımları\n&quot; +&#xA;    &quot;- Gerekli onaylar\n&quot; +&#xA;    &quot;- Tespit edilen çelişkiler\n&quot; +&#xA;    &quot;- Eksik veya belirsiz bilgiler\n&quot; +&#xA;    &quot;- Kaynak dokümanlar\n\n&quot; +&#xA;&#xA;    &quot;Yanıtlarında açık, sistematik ve anlaşılır bir dil kullan. &quot; +&#xA;    &quot;Önce doğrudan soruyu cevapla, ardından ilgili hükümleri &quot; +&#xA;    &quot;ve bunların birbirleriyle bağlantılarını açıkla.\n\n&quot; +&#xA;&#xA;    &quot;Birbiriyle ilişkili hükümleri birleştirirken hiçbir hükmün &quot; +&#xA;    &quot;anlamını değiştirme. Çelişki varsa bunu çözülmüş gibi gösterme. &quot; +&#xA;    &quot;Dokümanlarda bulunmayan bilgi için tahminde bulunma.\n\n&quot; +&#xA;&#xA;    &quot;En önemli önceliğin kurumsal bilgi havuzunun tamamını &quot; +&#xA;    &quot;doğru analiz etmek, ilişkili hükümleri bir araya getirmek, &quot; +&#xA;    &quot;çelişkileri ortaya çıkarmak ve kullanıcıya güvenilir &quot; +&#xA;    &quot;bir kurumsal değerlendirme sunmaktır.&quot;+&#xA;&#xA;&quot;21. Çelişki Filtreleme Kuralı: Dokümanlar arasında teorik bir mali eşik farkı (örneğin 50.000 TL vs 75.000 TL) olsa bile,&quot;+&#xA; &quot;kullanıcının sorduğu somut tutar bu çelişkili aralığa doğrudan girmiyorsa (örneğin her iki limitin de altındaysa), 'Tespit Edilen Çelişkiler' &quot;+&#xA; &quot;bölümünde süreci tıkayan bir çelişki olduğunu iddia etme. Sadece talep edilen tutar veya durum o çelişkili aralığın içinde kalıyorsa çelişki raporla.&quot;;&#xA;&#xA;out_response = &quot;&quot;;&#xA;&#xA;List&lt;string&gt; errors = new List&lt;string&gt;();&#xA;bool success = false;&#xA;&#xA;using (HttpClient client = new HttpClient())&#xA;{&#xA;    client.Timeout = TimeSpan.FromSeconds(120);&#xA;&#xA;    foreach (string model in models)&#xA;    {&#xA;        if (success) break;&#xA;&#xA;        for (int attempt = 1; attempt &lt;= 3; attempt++)&#xA;        {&#xA;            int httpCode = 0;&#xA;&#xA;            try&#xA;            {&#xA;                string url =&#xA;                    &quot;https://generativelanguage.googleapis.com/v1beta/models/&quot; +&#xA;                    model + &quot;:generateContent&quot;;&#xA;&#xA;                client.DefaultRequestHeaders.Remove(&quot;x-goog-api-key&quot;);&#xA;                client.DefaultRequestHeaders.Add(&quot;x-goog-api-key&quot;, in_APIKey);&#xA;&#xA;                var payload = new&#xA;                {&#xA;                    systemInstruction = new&#xA;                    {&#xA;                        parts = new[]&#xA;                        {&#xA;                            new { text = systemInstruction }&#xA;                        }&#xA;                    },&#xA;                    contents = new[]&#xA;                    {&#xA;                        new&#xA;                        {&#xA;                            role = &quot;user&quot;,&#xA;                            parts = new[]&#xA;                            {&#xA;                                new { text = prompt }&#xA;                            }&#xA;                        }&#xA;                    },&#xA;                    generationConfig = new&#xA;                    {&#xA;                        temperature = 0.2,&#xA;                        maxOutputTokens = 2048&#xA;                    }&#xA;                };&#xA;&#xA;                string json = JsonConvert.SerializeObject(payload);&#xA;&#xA;                using (var content = new StringContent(&#xA;                    json, Encoding.UTF8, &quot;application/json&quot;))&#xA;                {&#xA;                    using (var request = new HttpRequestMessage(&#xA;                        HttpMethod.Post, url))&#xA;                    {&#xA;                        request.Content = content;&#xA;&#xA;                        request.Headers.Add(&quot;x-goog-api-key&quot;, in_APIKey);&#xA;&#xA;                        // Senkron HTTP isteği&#xA;                        using (HttpResponseMessage response =&#xA;                            client.SendAsync(request).GetAwaiter().GetResult())&#xA;                        {&#xA;                            httpCode = (int)response.StatusCode;&#xA;&#xA;                            string responseText =&#xA;                                response.Content.ReadAsStringAsync()&#xA;                                .GetAwaiter().GetResult();&#xA;&#xA;                            if (response.IsSuccessStatusCode)&#xA;                            {&#xA;                                JObject result = JObject.Parse(responseText);&#xA;&#xA;                                string answer = (string)result&#xA;                                    [&quot;candidates&quot;]?[0]?[&quot;content&quot;]?[&quot;parts&quot;]?[0]?[&quot;text&quot;];&#xA;&#xA;                                if (!string.IsNullOrWhiteSpace(answer))&#xA;                                {&#xA;                                    out_response = answer;&#xA;                                    success = true;&#xA;                                    break;&#xA;                                }&#xA;&#xA;                                errors.Add(&#xA;                                    model + &quot; | Deneme: &quot; + attempt +&#xA;                                    &quot; | HTTP: &quot; + httpCode +&#xA;                                    &quot; | Yanıt metni boş: &quot; + responseText&#xA;                                );&#xA;                            }&#xA;                            else&#xA;                            {&#xA;                                errors.Add(&#xA;                                    model + &quot; | Deneme: &quot; + attempt +&#xA;                                    &quot; | HTTP: &quot; + httpCode +&#xA;                                    &quot; | Hata: &quot; + responseText&#xA;                                );&#xA;&#xA;                                // Model bulunamadıysa diğer modele geç.&#xA;                                if (httpCode == 404)&#xA;                                    break;&#xA;&#xA;                                // Kalıcı istemci hatalarında tekrar deneme.&#xA;                                if (httpCode &gt;= 400 &amp;&amp; httpCode &lt; 500 &amp;&amp;&#xA;                                    httpCode != 408 &amp;&amp; httpCode != 429)&#xA;                                    break;&#xA;                            }&#xA;                        }&#xA;                    }&#xA;                }&#xA;            }&#xA;            catch (Exception ex)&#xA;            {&#xA;                errors.Add(&#xA;                    model + &quot; | Deneme: &quot; + attempt +&#xA;                    &quot; | HTTP: &quot; + httpCode +&#xA;                    &quot; | Exception: &quot; + ex.ToString()&#xA;                );&#xA;            }&#xA;&#xA;            if (success) break;&#xA;&#xA;            if (attempt &lt; 3)&#xA;            {&#xA;                System.Threading.Thread.Sleep(2000 * attempt);&#xA;            }&#xA;        }&#xA;    }&#xA;}&#xA;&#xA;if (!success)&#xA;{&#xA;    out_response =&#xA;        &quot;TÜM MODEL DENEMELERİ BAŞARISIZ OLDU.\n\n&quot; +&#xA;        string.Join(&quot;\n\n--------------------\n\n&quot;, errors);&#xA;}&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,274.4" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_policy">[in_policies]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_query">[in_userQuery]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_APIKey">[in_apiKey]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_response">[out_agentResponse]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>

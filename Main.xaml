@@ -1,0 +1,440 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_policyFolderPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="754.8000000000001,3988" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_policies" />
+      <Variable x:TypeArguments="x:String" Name="str_userQuery" />
+      <Variable x:TypeArguments="x:String" Name="str_agentResponse" />
+      <Variable x:TypeArguments="x:String" Name="str_apiKey" />
+      <Variable x:TypeArguments="x:String" Name="str_responseTextFilePath" />
+      <Variable x:TypeArguments="x:String" Name="str_conflictTextFilePath" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_config" />
+      <Variable x:TypeArguments="x:String" Name="server" />
+      <Variable x:TypeArguments="x:String" Name="portNo" />
+      <Variable x:TypeArguments="x:String" Name="mailAddress" />
+      <Variable x:TypeArguments="x:String" Name="mailPassword" />
+      <Variable x:TypeArguments="x:String" Name="DEVTEST_MAIL" />
+      <Variable x:TypeArguments="x:String" Name="DEVTEST_ACTIVE" />
+      <Variable x:TypeArguments="x:String" Name="mailTo" />
+      <Variable x:TypeArguments="x:String" Name="mailCC" />
+      <Variable x:TypeArguments="x:String" Name="mailBcc" />
+      <Variable x:TypeArguments="x:String" Name="mailSubject" />
+      <Variable x:TypeArguments="x:String" Name="mailBody" />
+      <Variable x:TypeArguments="x:String" Name="fileAttachment" />
+      <Variable x:TypeArguments="x:String" Name="inputFolderPath" />
+      <Variable x:TypeArguments="x:String" Name="outputFolderPath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Türkçe Açıklama:&#xA;&#xA;Bu workflow süreç boyunca şunları yapar:&#xA;&#xA;Merkezi Veri Okuma: Data\Config.xlsx dosyasındaki ayarları, sabitleri ve yolları dinamik olarak okur.&#xA;&#xA;Dinamik Bellek Yönetimi: Okunan verileri süreç boyunca anında erişilebilir kılmak için DataTable formatına dönüştürür.&#xA;&#xA;Ortam Esnekliği: API anahtarları (in_APIKey), dosya dizinleri (.\data) ve departman e-posta adresleri gibi kritik bilgileri kod değiştirmeden sadece Excel üzerinden yönetmenizi sağlar.&#xA;&#xA;English Description:&#xA;&#xA;This workflow performs the following throughout the process:&#xA;&#xA;Centralized Data Reading: Dynamically reads settings, constants, and paths from the Data\Config.xlsx file.&#xA;&#xA;Dynamic Memory Management: Converts the read data into a DataTable format for instant accessibility throughout the process.&#xA;&#xA;Environment Flexibility: Allows you to manage critical information—such as API keys (in_APIKey), file directories (.\data), and department email addresses—solely via Excel without modifying the code." DisplayName="ReadConfigExcel - Invoke Workflow File (ProcessWorkflows\ReadConfigExcel.xaml)" sap:VirtualizedContainerService.HintSize="478.4,700" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ProcessWorkflows\ReadConfigExcel.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_configDT">[dt_config]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_configExcelFilePath">[Path.GetFullPath(".\Data\Config.xlsx")]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Türkçe:&#xA;Config.xlsx dosyası içerisindeki ilgili satırları kendi sunucu, e-posta, DEVTEST_ACTIVE modu ve Gemini API anahtarı bilgilerinizle eksiksiz doldurmalısınız.&#xA;&#xA;English:&#xA;Exactly right! You must fill in the respective rows inside Config.xlsx with your own server, email, DEVTEST_ACTIVE mode, and Gemini API key details." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,664" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[server]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "server").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[portNo]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "portNo").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[mailAddress]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "mailAddress").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[mailPassword]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "mailPassword").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[DEVTEST_MAIL]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "DEVTEST_MAIL").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[DEVTEST_ACTIVE]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "DEVTEST_ACTIVE").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[mailCC]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "mailCC").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[mailBcc]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "mailBcc").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[mailSubject]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "mailSubject").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[mailBody]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "mailBody").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_apiKey]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "apiKey").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[inputFolderPath]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Path.GetFullPath(dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "inputFolderPath").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault())]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[outputFolderPath]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Path.GetFullPath(dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "outputFolderPath").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault())]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Türkçe:&#xA;Bu workflow, .\data klasöründeki tüm Word ve Excel dokümanlarını dinamik olarak okur ve yapay zeka analizi için tek bir metin (String) havuzunda birleştirir.&#xA;&#xA;English:&#xA;This workflow dynamically reads all Word and Excel documents in the .\data folder and merges them into a single text (String) pool for AI analysis." DisplayName="GetAllPolicyDocuments - Invoke Workflow File (ProcessWorkflows\GetAllPolicyDocuments.xaml)" sap:VirtualizedContainerService.HintSize="478.4,332" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ProcessWorkflows\GetAllPolicyDocuments.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_policies">[str_policies]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_policyFolderPath">[inputFolderPath]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Türkçe:&#xA;Bu workflow, kullanıcıdan kurumsal sorgusunu bir girdi penceresiyle (Input Dialog) alır ve çıktı olarak (out_userQuery) ana sürece aktarır.&#xA;&#xA;English:&#xA;This workflow captures the user's query via an input dialog and passes it to the main process as an output (out_userQuery)." DisplayName="GetUserQuery - Invoke Workflow File (ProcessWorkflows\GetUserQuery.xaml)" sap:VirtualizedContainerService.HintSize="478.4,332" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ProcessWorkflows\GetUserQuery.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_userQuery">[str_userQuery]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Türkçe:&#xA;Bu workflow, API anahtarını, birleştirilmiş kurumsal politika metinlerini ve kullanıcı sorgusunu Gemini API'ye göndererek yapay zeka analiz raporunu (out_agentResponse) üretir.&#xA;&#xA;English:&#xA;This workflow sends the API key, combined corporate policy texts, and the user query to the Gemini API to generate the AI analysis report (out_agentResponse)." DisplayName="GetAgentResponse - Invoke Workflow File (ProcessWorkflows\GetAgentResponse.xaml)" sap:VirtualizedContainerService.HintSize="478.4,348" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ProcessWorkflows\GetAgentResponse.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_apiKey">[str_apiKey]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_policies">[str_policies]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_agentResponse">[str_agentResponse]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_userQuery">[str_userQuery]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Bu workflow, yapay zeka ajanının ürettiği yanıtı ve olası çelişki analizini çıktı klasörüne (.\Data\Output) metin dosyası olarak kaydeder.&#xA;&#xA;English:&#xA;This workflow saves the AI agent's response and conflict analysis as text files into the output folder (.\Data\Output)." DisplayName="WriteAgentResponseToTextFile - Invoke Workflow File (ProcessWorkflows\WriteAgentResponseToTextFile.xaml)" sap:VirtualizedContainerService.HintSize="478.4,316" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="ProcessWorkflows\WriteAgentResponseToTextFile.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_userQuery">[str_userQuery]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_conflictTextFilePath">[str_conflictTextFilePath]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">[outputFolderPath]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_responseTextFilePath">[str_responseTextFilePath]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_agentResponse">[str_agentResponse]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <If sap2010:Annotation.AnnotationText="Türkçe:&#xA;Bu If bloğu, çelişki durumunu kontrol ederek alıcı adresini ve dosya ekini dinamik olarak değiştirir: Çelişki varsa ilgili birime çelişki raporunu, yoksa standart alıcıya normal yanıtı yönlendirir.   &#xA;image_b7a202.png&#xA;&#xA;English:&#xA;This If block dynamically updates the recipient address and file attachment based on the conflict status: If a contradiction exists, it routes the conflict report to the designated recipient; otherwise, it sends the normal response to the standard recipient.   &#xA;image_b7a202.png" Condition="[String.IsNullOrWhiteSpace(str_conflictTextFilePath)]" sap:VirtualizedContainerService.HintSize="478.4,902.4" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,280" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,115.2" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[mailTo]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "mailTo").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[fileAttachment]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[str_responseTextFilePath]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,280" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,115.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[mailTo]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[dt_config.AsEnumerable().
+    Where(Function(row) row("Parameter").ToString.Trim = "conflictMailTo").
+    Select(Function(row) row("Value").ToString.Trim).
+    FirstOrDefault()]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[fileAttachment]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[str_conflictTextFilePath]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Türkçe:&#xA;Bu workflow, üretilen yanıtı veya çelişki raporu metin dosyasını ek olarak ekleyerek ilgili alıcıya gönderir; ayrıca DEVTEST_ACTIVE değişkeni &quot;ON&quot; olduğunda tüm e-postaları güvenli bir şekilde DEVTEST_MAIL adresine, &quot;OFF&quot; olduğunda ise normal alıcıya yönlendirir.   English:&#xA;This workflow sends the generated response or conflict report text file as an attachment to the recipient; furthermore, it safely routes all emails to DEVTEST_MAIL when the DEVTEST_ACTIVE variable is &quot;ON&quot;, and to the standard recipient when &quot;OFF&quot;.   " DisplayName="Mail_SMTPMailGonderimi - Invoke Workflow File (ProcessWorkflows\Mail_SMTPMailGonderimi.xaml)" sap:VirtualizedContainerService.HintSize="478.4,370.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="ProcessWorkflows\Mail_SMTPMailGonderimi.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_attachment">[fileAttachment]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DEV_TEST_MAIL">[DEVTEST_MAIL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DEV_TEST_ACTIVE">[DEVTEST_ACTIVE]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_htmlTablo">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_htmlImza">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_serverAdi">[server]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_emailSifresi">[mailPassword]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_emailAdresi">[mailAddress]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_portNumarasi">[portNo]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mailSubject">[mailSubject]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mailBcc">[mailBcc]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mailCC">[mailCC]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mailBody">[mailBody]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mailTo">[mailTo]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>

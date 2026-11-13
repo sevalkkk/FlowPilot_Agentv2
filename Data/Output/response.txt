@@ -1,0 +1,16 @@
+﻿**Özet Cevap:**
+Ofisten çalışan bir personel olarak 85.000 TL değerindeki mobil iş istasyonu talebiniz için şirket portalı üzerinden talep oluşturmanız, Departman Yöneticinizin ve Direktör seviyesinin (BT Direktörü / İlgili Direktör) onayını almanız, ardından BT Operasyon teknik/stok kontrolü sonrası Satın Alma birimi aracılığıyla alımın gerçekleştirilmesi gerekmektedir. 85.000 TL tutarı 100.000 TL’nin altında kaldığı için Finans Direktörü onayı aranmaz.
+
+---
+
+### Uygulanacak Prosedür
+Bu süreçte temel olarak **PR-BT-004 BT Ekipman Talep Prosedürü** işletilir; mali onay sınırları ve sipariş kontrolü için ise **PR-FIN-007 Satın Alma ve Harcama Onay Prosedürü** ile **Yetki Matrisi** hükümleri uygulanır. (Ofis çalışanı olmanız sebebiyle *POL-IK-012 Uzaktan Çalışma Politikası* kapsamındaki ek uygunluk formu yükümlülüğü sizin için geçerli değildir.)
+
+---
+
+### İzlenecek İşlem Adımları
+1. **Talep Oluşturma:** Şirket portalı üzerinden **FRM-IT-004 Ekipman Talep Formu** doldurulur ve iş projesine dair gerekçe belirtilir *(Kaynak: PR-BT-004)*.
+2. **Departman Yöneticisi Değerlendirmesi:** Form, bağlı bulunulan Departman Yöneticisine iletilir. Yönetici iş ihtiyacını ve bütçeyi inceleyerek onay verir *(Kaynak: PR-BT-004, PR-FIN-007, Yetki Matrisi)*.
+3. **Direktör Onay Seviyesi:** Tutar 85.000 TL olduğu için talep Direktör onayına sunulur *(Kaynak: PR-BT-004, PR-FIN-007, Yetki Matrisi)*.
+4. **Teknik ve Stok Kontrolü:** Onaylanan talep BT Operasyon ekibine iletilir; ekipman için teknik uygunluk ve kurum içi stok kontrolü yapılır *(Kaynak: PR-BT-004)*.
+5. **Satın Alma Süreci:** Üst segment laptop stokta bulunmadığı takdirde süreç Satın Alma birimine devredilir. Satın Alma ekibi onayların tamamlandığını teyit ederek siparişi oluşturur *(Kaynak: PR-BT-004, PR-FIN
